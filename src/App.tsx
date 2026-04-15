@@ -1,11 +1,7 @@
 import { useState } from 'react';
 import Button from './components/Button';
 // Icons
-<<<<<<< HEAD
 import { BsFacebook, BsInstagram, BsLinkedin } from 'react-icons/bs';
-=======
-import { BsGithub, BsInstagram, BsLinkedin } from 'react-icons/bs';
->>>>>>> origin/main
 import { FaDiscord } from 'react-icons/fa';
 import { GrDownload } from "react-icons/gr";
 import { SiJavascript, SiTypescript, SiNodedotjs, SiPostman, SiExpress, SiPostgresql, SiMongodb, SiDocker, SiGit } from 'react-icons/si'
@@ -20,7 +16,6 @@ const NAV_LINKS = [
 
 const SOCIALS = [
   {
-<<<<<<< HEAD
     name: 'Facebook',
     href: 'https://www.facebook.com/share/17PBGe7bst/',
     Icon: BsFacebook,
@@ -44,26 +39,6 @@ const SOCIALS = [
     Icon: FaDiscord,
     action: 'copy',
     copyValue: 'abdelaziz3390',
-=======
-    name: 'GitHub',
-    href: 'https://github.com/Abdelazizomar22',
-    Icon: BsGithub,
-  },
-  {
-    name: 'LinkedIn',
-    href: 'https://linkedin.com/in/abdelaziz-omar-645250300',
-    Icon: BsLinkedin,
-  },
-  {
-    name: 'Instagram',
-    href: 'https://instagram.com',
-    Icon: BsInstagram,
-  },
-  {
-    name: 'Discord',
-    href: 'Abdelaziz#3390',
-    Icon: FaDiscord,
->>>>>>> origin/main
   },
 ];
 
@@ -158,15 +133,9 @@ export default function PortfolioPage() {
   const [showMoreSkills, setShowMoreSkills] = useState(false);
   const [copied, setCopied] = useState<string | null>(null);
 
-<<<<<<< HEAD
   const handleCopy = (e: React.MouseEvent, name: string, value: string) => {
     e.preventDefault();
     navigator.clipboard.writeText(value).then(() => {
-=======
-  const handleCopy = (e: React.MouseEvent, name: string, href: string) => {
-    e.preventDefault();
-    navigator.clipboard.writeText(href).then(() => {
->>>>>>> origin/main
       setCopied(name);
       setTimeout(() => setCopied(null), 2000);
     });
@@ -263,7 +232,6 @@ export default function PortfolioPage() {
 
             <div className="mt-6 sm:mt-14 flex flex-col gap-4">
               <div className='flex gap-4 sm:gap-6'>
-<<<<<<< HEAD
                 {SOCIALS.map(({ name, href, Icon, action, copyValue }) => (
                   <div className="relative" key={name}>
                     <a
@@ -272,16 +240,6 @@ export default function PortfolioPage() {
                       rel={action === 'link' ? 'noreferrer' : undefined}
                       aria-label={name}
                       onClick={action === 'copy' ? (e) => handleCopy(e, name, copyValue ?? href) : undefined}
-=======
-                {SOCIALS.map(({ name, href, Icon }) => (
-                  <div className="relative" key={name}>
-                    <a
-                      href={href}
-                      target="_blank"
-                      rel="noreferrer"
-                      aria-label={name}
-                      onClick={(e) => handleCopy(e, name, href)}
->>>>>>> origin/main
                       className={`inline-flex bg-white hover:bg-black hover:text-white text-black p-3 sm:p-4 items-center justify-center rounded-md border-2 border-black transition-all duration-200 hover:-translate-y-0.5`}
                     >
                       <Icon className="h-5 w-5 sm:h-6 sm:w-6" />
@@ -421,13 +379,8 @@ export default function PortfolioPage() {
               PostgreSQL, MongoDB, and Redis.
             </p>
             <p>
-<<<<<<< HEAD
               When I&apos;m not coding, you can find me on LinkedIn sharing what I learn and on
               Instagram or Facebook staying connected. I&apos;m always looking for opportunities to
-=======
-              When I&apos;m not coding, you can find me on GitHub exploring open source projects,
-              or on LinkedIn sharing what I learn. I&apos;m always looking for opportunities to
->>>>>>> origin/main
               build impactful backend solutions and grow within a professional team.
             </p>
           </div>
@@ -515,7 +468,6 @@ export default function PortfolioPage() {
             <div className="flex flex-col w-full sm:justify-between sm:flex-row gap-4 pt-2 sm:pt-1">
               <Button children='Get In Touch' className="mx-auto! md:px-9 md:mx-0! h-15 md:w-fit! text-[1rem]" />
               <div className='hidden md:flex items-center justify-center lg:justify-end gap-6'>
-<<<<<<< HEAD
                 {SOCIALS.map(({ name, href, Icon, action, copyValue }) => (
                   <div className="relative" key={name}>
                     <a
@@ -524,16 +476,6 @@ export default function PortfolioPage() {
                       rel={action === 'link' ? 'noreferrer' : undefined}
                       aria-label={name}
                       onClick={action === 'copy' ? (e) => handleCopy(e, name, copyValue ?? href) : undefined}
-=======
-                {SOCIALS.map(({ name, href, Icon }) => (
-                  <div className="relative" key={name}>
-                    <a
-                      href={href}
-                      target="_blank"
-                      rel="noreferrer"
-                      aria-label={name}
-                      onClick={(e) => handleCopy(e, name, href)}
->>>>>>> origin/main
                       className="inline-flex bg-white hover:bg-black hover:text-white text-black p-3 sm:p-4 items-center justify-center rounded-md border-2 border-black transition-all duration-200 hover:-translate-y-0.5"
                     >
                       <Icon className="h-5 w-5 sm:h-6 sm:w-6" />
@@ -591,7 +533,6 @@ export default function PortfolioPage() {
           </p>
 
           <div className='md:hidden flex items-center'>
-<<<<<<< HEAD
             {SOCIALS.map(({ name, href, Icon, action, copyValue }) => (
               <div className="relative" key={name}>
                 <a
@@ -600,16 +541,6 @@ export default function PortfolioPage() {
                   rel={action === 'link' ? 'noreferrer' : undefined}
                   aria-label={name}
                   onClick={action === 'copy' ? (e) => handleCopy(e, name, copyValue ?? href) : undefined}
-=======
-            {SOCIALS.map(({ name, href, Icon }) => (
-              <div className="relative" key={name}>
-                <a
-                  href={href}
-                  target="_blank"
-                  rel="noreferrer"
-                  aria-label={name}
-                  onClick={(e) => handleCopy(e, name, href)}
->>>>>>> origin/main
                   className="inline-flex bg-black hover:bg-white hover:text-black p-1.5 items-center justify-center rounded-md border-2 border-black transition-all duration-200 hover:-translate-y-0.5"
                 >
                   <Icon className="h-5 w-5" />
