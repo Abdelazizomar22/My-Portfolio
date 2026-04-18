@@ -199,7 +199,7 @@ export default function PortfolioPage() {
             <img src="/black-logo.png" alt="Logo" className="object-contain h-12 w-12" />
           </a>
 
-          <div className="hidden items-center gap-9 text-lg font-bold lg:flex">
+          <div className="hidden items-center gap-9 text-[1.2rem] font-bold lg:flex">
             {NAV_LINKS.map((link) => (
               <a
                 key={link.label}
@@ -212,10 +212,10 @@ export default function PortfolioPage() {
           </div>
 
           <div className="hidden items-center gap-3 lg:flex">
-              <Button variant='link' href="/Abdelaziz_Omar_Resume.pdf" target="_blank" rel="noreferrer" onClick={() => setMenuOpen(false)} children={(
-                <div className='text-lg flex items-center gap-2'>
+              <Button className='p-3!' variant='link' href="/Abdelaziz_Omar_Resume.pdf" target="_blank" rel="noreferrer" onClick={() => setMenuOpen(false)} children={(
+                <div className='text-md flex items-center gap-2'>
                   <span>Resume</span>
-                  <GrDownload className="h-4 w-4" />
+                  <GrDownload className="h-3.5 w-3.5" />
                 </div>
               )} />
           </div>
@@ -257,7 +257,7 @@ export default function PortfolioPage() {
 
       <section
         id="home"
-        className="min-h-screen mx-auto flex items-center justify-center w-full px-5 sm:px-10 lg:px-12"
+        className="min-h-screen max-w-295 mx-auto flex w-full px-5 sm:px-8 lg:px-10"
       >
         <div className="grid items-center lg:grid-cols-2">
           <div className="mb-24 md:mb-0 order-2 lg:order-1">
@@ -318,7 +318,7 @@ export default function PortfolioPage() {
 
       <section
         id="skills"
-        className="px-5 pb-24 sm:px-8 sm:pb-28 lg:px-10 lg:pb-32"
+        className="mx-auto w-full max-w-295 px-5 pb-24 sm:px-8 sm:pb-28 lg:px-10 lg:pb-32"
       >
         <SectionHeading prefix="My" highlight="Skills" />
         <div className="mt-14 grid grid-cols-2 gap-4 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 lg:gap-8">
@@ -354,7 +354,7 @@ export default function PortfolioPage() {
       <section className="bg-[#060606] text-white">
         <div
           id="experience"
-          className="px-5 py-20 sm:px-8 lg:px-10 lg:py-24"
+          className="mx-auto w-full max-w-295 px-5 py-20 sm:px-8 lg:px-10 lg:py-24"
         >
           <SectionHeading prefix="My" highlight="Experience" dark centered={true} />
 
@@ -401,14 +401,16 @@ export default function PortfolioPage() {
 
       <section
         id="about"
-        className="mx-auto grid w-full items-center justify-center gap-12 px-5 py-20 sm:px-8 lg:grid-cols-2 lg:gap-16 lg:py-24"
+        className="mx-auto grid w-full max-w-295 items-center gap-12 px-5 py-20 sm:px-8 lg:grid-cols-[560px_minmax(0,1fr)] lg:gap-16 lg:py-24"
       >
         <img
           src="/about-portrait.png"
           alt="Portrait illustration of Abdelaziz Omar"
+          width={620}
+          height={640}
           className="h-auto w-full"
         />
-        <div className="md:max-140 lg:max-w-155">
+        <div className="max-w-155">
           <SectionHeading prefix="About" centered={false} highlight="Me" />
 
           <div className="mt-10 space-y-6 tracking-[0.03em] text-black/70 text-md">
@@ -436,21 +438,23 @@ export default function PortfolioPage() {
         id="projects"
         className="bg-[#060606] text-white"
       >
-        <div className="px-5 pb-20 pt-20 sm:px-8 lg:px-10 lg:pb-28">
+        <div className="mx-auto w-full max-w-295 px-5 pb-20 pt-20 sm:px-8 lg:px-10 lg:pb-28">
           <SectionHeading prefix="My" highlight="Projects" dark />
 
           <div className="mt-16 space-y-16 lg:space-y-24">
             {PROJECTS.map((project, index) => (
               <article
                 key={project.name}
-                className={`grid items-center gap-10 lg:grid-cols-2 lg:gap-14 ${index % 2 === 1 ? 'lg:[&>*:first-child]:order-2' : ''
+                className={`grid items-center gap-10 lg:grid-cols-[minmax(0,470px)_minmax(0,1fr)] lg:gap-14 ${index % 2 === 1 ? 'lg:[&>*:first-child]:order-2' : ''
                   }`}
               >
-                <div className="overflow-hidden rounded-[20px]">
+                <div className="overflow-hidden rounded-[20px] bg-[#111111]">
                   <img
                     src={project.image}
                     alt={project.imageAlt}
-                    className="object-contain h-auto w-full"
+                    width={420}
+                    height={300}
+                    className="h-auto w-full"
                   />
                 </div>
 
@@ -482,9 +486,9 @@ export default function PortfolioPage() {
 
       <section
         id="contact"
-        className="section-center px-5 py-10 md:py-20 sm:px-8 lg:px-10"
+        className="mx-auto w-full max-w-295 px-5 py-10 md:py-20 sm:px-8 lg:px-10"
       >
-        <div className="grid gap-12 lg:grid-cols-2 lg:gap-20">
+        <div className="grid gap-12 lg:grid-cols-2 lg:items-start lg:gap-20">
           <form
             onSubmit={handleContactSubmit}
             className="order-last md:order-first flex w-full flex-col gap-3 sm:gap-2"
@@ -582,7 +586,7 @@ export default function PortfolioPage() {
       </section>
 
       <footer className="bg-black text-white pb-5 md:pb-0">
-        <div className="mx-auto flex w-full gap-5 px-5 py-7 items-center justify-between sm:px-8 lg:px-10">
+        <div className="mx-auto flex w-full max-w-295 gap-5 px-5 py-7 items-center justify-between sm:px-8 lg:px-10">
           <a href="#home" className="flex items-center gap-3">
             <img src="/white-logo.png" alt="Logo" className="object-contain h-12 w-12" />
           </a>
