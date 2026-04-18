@@ -586,7 +586,7 @@ export default function PortfolioPage() {
       </section>
 
       <footer className="bg-black text-white pb-5 md:pb-0">
-        <div className="mx-auto flex w-full max-w-295 gap-5 px-5 py-7 items-center justify-between sm:px-8 lg:px-10">
+        <div className="mx-auto flex w-full gap-5 px-5 py-7 items-center justify-between sm:px-8 lg:px-10">
           <a href="#home" className="flex items-center gap-3">
             <img src="/white-logo.png" alt="Logo" className="object-contain h-12 w-12" />
           </a>
