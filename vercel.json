@@ -1,0 +1,36 @@
+{
+  "rewrites": [
+    {
+      "source": "/projects/:path*",
+      "destination": "https://raw.githubusercontent.com/Abdelazizomar22/My-Portfolio/main/public/projects/:path*"
+    },
+    {
+      "source": "/skills-icons/:path*",
+      "destination": "https://raw.githubusercontent.com/Abdelazizomar22/My-Portfolio/main/public/skills-icons/:path*"
+    },
+    {
+      "source": "/expreience/:path*",
+      "destination": "https://raw.githubusercontent.com/Abdelazizomar22/My-Portfolio/main/public/expreience/:path*"
+    },
+    {
+      "source": "/hero-picture.png",
+      "destination": "https://raw.githubusercontent.com/Abdelazizomar22/My-Portfolio/main/public/hero-picture.png"
+    },
+    {
+      "source": "/about-portrait.png",
+      "destination": "https://raw.githubusercontent.com/Abdelazizomar22/My-Portfolio/main/public/about-portrait.png"
+    },
+    {
+      "source": "/black-logo.png",
+      "destination": "https://raw.githubusercontent.com/Abdelazizomar22/My-Portfolio/main/public/black-logo.png"
+    },
+    {
+      "source": "/white-logo.png",
+      "destination": "https://raw.githubusercontent.com/Abdelazizomar22/My-Portfolio/main/public/white-logo.png"
+    },
+    {
+      "source": "/Abdelaziz_Omar_Resume.pdf",
+      "destination": "https://raw.githubusercontent.com/Abdelazizomar22/My-Portfolio/main/public/Abdelaziz_Omar_Resume.pdf"
+    }
+  ]
+}
