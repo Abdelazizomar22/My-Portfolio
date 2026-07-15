@@ -58,36 +58,36 @@ const SKILLS = [
 
 const EXPERIENCE = [
   {
-    title: 'Software Engineer at VertixSoft',
-    date: 'Sep 2025 - Present',
+    title: 'Freelance Backend Developer',
+    date: 'Jul 2026 - Present',
     description:
-      'Developing and maintaining backend services and RESTful APIs to support business requirements. Collaborating with cross-functional teams to design scalable system architecture and ensure code quality.',
+      'Developing backend solutions for business applications with Node.js, TypeScript, Express.js, PostgreSQL, and Sequelize, including secure authentication, role-based access, inventory and sales workflows, audit logs, reporting, background processing, documented REST APIs, testing, Docker, and CI/CD preparation.',
     accent: 'dark' as const,
     company: {
-      logo: '/expreience/vertix.png',
-      url: 'https://vertixsoft.com/'
+      logo: '/white-logo.png',
+      url: 'https://www.linkedin.com/in/abdelaziz-omarr/'
     }
   },
   {
-    title: 'Backend Developer Intern at Agricultural Bank of Egypt',
-    date: 'Summer 2025',
+    title: 'Backend Development Intern at Robusta Studio',
+    date: 'Aug 2024 - Sep 2024',
     description:
-      'Attended training sessions covering backend development best practices and secure API design within a financial systems environment. Gained exposure to cloud-based deployment and integration workflows.',
+      'Contributed to a retail loyalty and commerce integration backend using Node.js, Express.js, PostgreSQL, Sequelize, and Redis. Implemented loyalty accounts, points and voucher workflows, order and refund webhooks, transactional updates, JWT authentication, role-based authorization, validation, rate limiting, audit logging, and centralized error handling.',
     accent: 'muted' as const,
-    company: {
-      logo: '/expreience/abe.png',
-      url: 'https://www.abe.com.eg/'
-    }
-  },
-  {
-    title: 'Backend Developer Intern at Robusta Studio',
-    date: 'Summer 2024',
-    description:
-      'Completed an intensive backend development track covering RESTful API design, database management, and authentication best practices. Built and delivered a backend project applying Node.js industry-standard workflows.',
-    accent: 'dark' as const,
     company: {
       logo: '/expreience/robusta-studio.png',
       url: 'https://robustagroup.com/studio/'
+    }
+  },
+  {
+    title: 'Technology Intern at Agricultural Bank of Egypt',
+    date: 'Jul 2025 - Aug 2025',
+    description:
+      'Completed technical assessments in backend fundamentals, databases, secure software practices, and banking technology workflows. Rotated across Web Development, IT, and Data Analysis teams, gaining exposure to core banking systems and centralized platforms that support accounts, transactions, financial operations, and internal services.',
+    accent: 'dark' as const,
+    company: {
+      logo: '/expreience/abe.png',
+      url: 'https://www.abe.com.eg/'
     }
   },
 ];
@@ -95,30 +95,30 @@ const EXPERIENCE = [
 const PROJECTS = [
   {
     number: '01',
-    name: 'Souqly',
+    name: "Morgan's Hope",
     description:
-      'A full e-commerce REST API supporting product catalog, shopping cart, and order management. Features JWT auth, role-based access (admin/customer), bcrypt password hashing, and email notifications.',
-    href: 'https://github.com/Abdelazizomar22/souqly-api',
-    image: '/projects/souqly.jpeg',
-    imageAlt: 'Souqly preview',
+      'An AI-assisted chest image screening platform with secure account flows, consent tracking, scan uploads, analysis history, structured results, PDF reports, hospital guidance, and a grounded medical assistant. Its multi-model AI pipeline runs as Docker-based services on Hugging Face Spaces and connects to the Node.js backend through internal HTTP APIs.',
+    href: 'https://github.com/Abdelazizomar22/morganshope-morgan',
+    image: '/projects/morgans-hope.jpeg',
+    imageAlt: "Morgan's Hope preview",
   },
   {
     number: '02',
-    name: 'PulseRooms',
+    name: 'Daleel',
     description:
-      'A real-time chat backend supporting multiple rooms and concurrent users via WebSockets. Features JWT auth over HTTP and WebSocket connections, with persistent message history in PostgreSQL.',
-    href: 'https://github.com/Abdelazizomar22/pulse-rooms-api',
-    image: '/projects/pulserooms.jpeg',
-    imageAlt: 'PulseRooms preview',
+      'A government-services platform that organizes service requirements, procedures, documents, and practical guidance. Led backend development for authentication, users, services, categories, comments, voting, settings, and user-submitted services with a pending-approval workflow, plus a Groq-powered RAG-style chatbot grounded in local service knowledge.',
+    href: 'https://github.com/kholod1553/auth-login-for-daleel1',
+    image: '/projects/daleel.jpeg',
+    imageAlt: 'Daleel preview',
   },
   {
     number: '03',
-    name: 'LinkBrief',
+    name: 'PulseRooms',
     description:
-      'A URL shortening service with click analytics, Redis caching for high-traffic redirects, and Redis-based rate limiting. Secured with JWT authentication and detailed per-link reporting endpoints.',
-    href: 'https://github.com/Abdelazizomar22/linkbrief-api',
-    image: '/projects/linkbrief.jpeg',
-    imageAlt: 'LinkBrief preview',
+      'A real-time messaging backend with authenticated WebSocket connections and persistent PostgreSQL message history. Includes access and refresh tokens, protected room membership, role-based room management, request validation, paginated message retrieval, and a relational schema with indexes for efficient room-based queries.',
+    href: 'https://github.com/Abdelazizomar22/pulse-rooms-api',
+    image: '/projects/pulserooms.jpeg',
+    imageAlt: 'PulseRooms preview',
   },
 ];
 
@@ -463,7 +463,9 @@ export default function PortfolioPage() {
                     {project.number}
                   </p>
                   <h3 className="mt-2 text-[2.25rem] font-bold leading-none tracking-[-0.05em] text-white sm:text-[2.6rem]">
-                    {project.name}
+                    <a href={project.href} target="_blank" rel="noreferrer" className="transition-opacity duration-200 hover:opacity-70">
+                      {project.name}
+                    </a>
                   </h3>
                   <p className="mt-5 text-[1.18rem] leading-[1.24] tracking-[-0.03em] text-white/72 sm:text-[1.25rem]">
                     {project.description}
