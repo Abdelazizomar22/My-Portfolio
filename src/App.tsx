@@ -98,7 +98,7 @@ const PROJECTS = [
     name: "Morgan's Hope",
     description:
       'An AI-assisted chest image screening platform with secure account flows, consent tracking, scan uploads, analysis history, structured results, PDF reports, hospital guidance, and a grounded medical assistant. Its multi-model AI pipeline runs as Docker-based services on Hugging Face Spaces and connects to the Node.js backend through internal HTTP APIs.',
-    href: 'https://github.com/Abdelazizomar22/morganshope-morgan',
+    href: 'https://github.com/MorgansHope/MorgansHope',
     image: '/projects/morgans-hope.jpeg',
     imageAlt: "Morgan's Hope preview",
   },
@@ -107,7 +107,7 @@ const PROJECTS = [
     name: 'Daleel',
     description:
       'A government-services platform that organizes service requirements, procedures, documents, and practical guidance. Led backend development for authentication, users, services, categories, comments, voting, settings, and user-submitted services with a pending-approval workflow, plus a Groq-powered RAG-style chatbot grounded in local service knowledge.',
-    href: 'https://github.com/kholod1553/auth-login-for-daleel1',
+    href: 'https://github.com/Daleel-CSI/daleel-monorepo',
     image: '/projects/daleel.jpeg',
     imageAlt: 'Daleel preview',
   },
